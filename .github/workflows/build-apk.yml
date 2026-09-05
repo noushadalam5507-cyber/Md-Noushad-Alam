@@ -1,0 +1,53 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Instagrand APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (v22 LTS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Java JDK (Java 21 for modern Gradle)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 21
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Node Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Web Assets (Vite)
+        run: npm run build
+
+      - name: Add and Sync Android Platform (Capacitor)
+        run: |
+          npx @capacitor/cli add android || true
+          npx @capacitor/cli sync android
+
+      - name: Build Android Debug APK
+        working-directory: android
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Instagrand-VIP-v1.0-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Deep Obsidian Black Background Gradient -->
+    <radialGradient id="apk-bg" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#15082e" />
+      <stop offset="35%" stop-color="#080314" />
+      <stop offset="70%" stop-color="#020108" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Electric Blue to Royal Purple Dual Gradient (Stream 1) -->
+    <linearGradient id="blue-purple-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="30%" stop-color="#0099ff" />
+      <stop offset="70%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#c026d3" />
+    </linearGradient>
+
+    <!-- Royal Purple to Cyan Blue Gradient (Stream 2) -->
+    <linearGradient id="purple-blue-2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="35%" stop-color="#9333ea" />
+      <stop offset="75%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+
+    <!-- Chrome Mirror Specular Shine -->
+    <linearGradient id="apk-gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Glowing 3D Neon Filter -->
+    <filter id="neon-power-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur1" />
+      <feGaussianBlur stdDeviation="28" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="halo-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="36" result="outerGlow" />
+    </filter>
+  </defs>
+
+  <!-- Base App Icon Rounded Square Background (Android Adaptive Icon / APK format) -->
+  <rect width="512" height="512" rx="120" fill="url(#apk-bg)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="4" />
+
+  <!-- Ambient Glow Orbs (Electric Blue Left, Royal Purple Right, Obsidian Deep Base) -->
+  <circle cx="150" cy="160" r="100" fill="#00d2ff" opacity="0.25" filter="url(#halo-glow)" />
+  <circle cx="360" cy="180" r="110" fill="#a855f7" opacity="0.3" filter="url(#halo-glow)" />
+  <circle cx="256" cy="370" r="120" fill="#1e1b4b" opacity="0.5" />
+
+  <!-- 3D Orbital Outer Rings (Blue + Purple Neon) -->
+  <circle cx="256" cy="245" r="175" fill="none" stroke="url(#blue-purple-1)" stroke-width="6" opacity="0.35" filter="url(#halo-glow)" />
+  <circle cx="256" cy="245" r="170" fill="none" stroke="url(#blue-purple-1)" stroke-width="3" stroke-dasharray="16 10" opacity="0.7" />
+
+  <!-- Inner Concentric Orbit Ring -->
+  <circle cx="256" cy="245" r="140" fill="none" stroke="url(#purple-blue-2)" stroke-width="2" opacity="0.5" />
+
+  <!-- 3D Geometric "N" & Futuristic Nova Core Emblem -->
+  <g filter="url(#neon-power-glow)">
+    <!-- Main Left-to-Right Futuristic 3D "N" Spine 1 (Electric Blue) -->
+    <path d="M145,340 L145,155 C145,138 162,128 178,138 L334,248 C346,256 362,248 362,234 L362,145" 
+          fill="none" 
+          stroke="url(#blue-purple-1)" 
+          stroke-width="38" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Intersecting 3D "N" Spine 2 (Royal Purple to Cyan) -->
+    <path d="M367,150 L367,335 C367,352 350,362 334,352 L178,242 C166,234 150,242 150,256 L150,345" 
+          fill="none" 
+          stroke="url(#purple-blue-2)" 
+          stroke-width="26" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Central Diamond Starburst / Platinum Nova Core -->
+    <polygon points="256,175 298,245 256,315 214,245" fill="#ffffff" opacity="0.95" />
+    <polygon points="256,200 282,245 256,290 230,245" fill="#00f0ff" />
+    <circle cx="256" cy="245" r="12" fill="#ffffff" />
+  </g>
+
+  <!-- Top Glass Chrome Highlight Sweep -->
+  <path d="M110,60 Q256,20 402,60 Q256,180 110,60 Z" fill="url(#apk-gloss)" opacity="0.4" />
+  <circle cx="256" cy="245" r="6" fill="#ffffff" filter="url(#neon-power-glow)" />
+
+  <!-- Bottom Brand Title on Icon: "NOVAGRAND PRO" (Blue & Purple Cyber styling) -->
+  <g>
+    <!-- Background Pill for Title -->
+    <rect x="116" y="420" width="280" height="42" rx="21" fill="#030109" stroke="url(#blue-purple-1)" stroke-width="2" opacity="0.95" />
+    
+    <!-- Text: NOVAGRAND PRO -->
+    <text x="256" y="446" 
+          text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="16" 
+          letter-spacing="3" 
+          fill="#00f0ff">
+      NOVAGRAND <tspan fill="#d946ef">PRO</tspan>
+    </text>
+  </g>
+</svg>

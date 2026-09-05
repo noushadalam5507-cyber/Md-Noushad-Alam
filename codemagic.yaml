@@ -1,0 +1,37 @@
+workflows:
+  android-production-apk:
+    name: Instagrand VIP Android APK
+    max_build_duration: 60
+    instance_type: linux_x2
+    environment:
+      vars:
+        PACKAGE_NAME: "com.instagrand.app"
+      node: 20
+      java: 21
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install --legacy-peer-deps
+      - name: Copy Firebase Google Services
+        script: |
+          cp -f google-services.json android/app/google-services.json || true
+      - name: Build Web Production Bundle
+        script: |
+          npm run build
+      - name: Sync Native Capacitor Android
+        script: |
+          npx cap sync android
+      - name: Build Installable Android APK
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - noushadalam5507@gmail.com
+        notify:
+          success: true
+          failure: true

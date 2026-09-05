@@ -1,0 +1,33 @@
+{
+  "appId": "com.instagrand.app",
+  "appName": "Instagrand VIP",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "plugins": {
+    "AdMob": {
+      "appId": "ca-app-pub-9658260608635009~8417798607",
+      "initializeForTesting": false,
+      "testingDevices": []
+    },
+    "Camera": {
+      "presentationStyle": "fullscreen"
+    },
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#09090b",
+      "showSpinner": false
+    }
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  },
+  "ios": {
+    "contentInset": "always"
+  }
+}

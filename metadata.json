@@ -1,0 +1,11 @@
+{
+  "name": "NovaGrand",
+  "description": "NovaGrand - Futuristic 4K Social Studio with Video Calling, Reels Studio, Direct DMs, and Creator Monetization.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
