@@ -9,6 +9,7 @@
     },
     "preview": {
       "distribution": "internal",
+      "credentialsSource": "remote",
       "node": "20.18.0",
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
@@ -16,10 +17,12 @@
         "YARN_IGNORE_ENGINES": "true"
       },
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "credentialsSource": "remote"
       }
     },
     "production": {
+      "credentialsSource": "remote",
       "node": "20.18.0",
       "env": {
         "NPM_CONFIG_LEGACY_PEER_DEPS": "true",
@@ -27,7 +30,8 @@
         "YARN_IGNORE_ENGINES": "true"
       },
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "credentialsSource": "remote"
       }
     }
   },

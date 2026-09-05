@@ -50,7 +50,15 @@
       ]
     },
     "plugins": [
-      "@react-native-google-signin/google-signin"
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow NovaGrand to access your photos to share media.",
+          "cameraPermission": "Allow NovaGrand to access your camera to record 4K reels."
+        }
+      ],
+      "expo-video"
     ],
     "extra": {
       "eas": {
