@@ -318,7 +318,7 @@ export const AIMediaFilterStudio: React.FC<AIMediaFilterStudioProps> = ({
       label: 'Quantum Circuits',
     },
     {
-      url: 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4',
+      url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
       type: 'video' as const,
       label: 'Cyber City Video',
     },

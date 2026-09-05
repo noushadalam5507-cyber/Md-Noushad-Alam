@@ -113,7 +113,7 @@ export const ReelsView: React.FC<ReelsViewProps> = ({
   const [newSongAudioUrl, setNewSongAudioUrl] = useState<string>('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
   const [newSongCoverUrl, setNewSongCoverUrl] = useState<string>('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&auto=format&fit=crop&q=80');
   const [newCategory, setNewCategory] = useState<'hindi' | 'english' | 'urdu' | 'slowed'>('hindi');
-  const [newVideoUrl, setNewVideoUrl] = useState<string>('https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4');
+  const [newVideoUrl, setNewVideoUrl] = useState<string>('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4');
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const reelAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -638,7 +638,7 @@ export const ReelsView: React.FC<ReelsViewProps> = ({
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleVideoEnded}
           onError={(e) => {
-            const fallback = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4';
+            const fallback = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
             if (e.currentTarget.src !== fallback) {
               e.currentTarget.src = fallback;
               e.currentTarget.play().catch(() => {});

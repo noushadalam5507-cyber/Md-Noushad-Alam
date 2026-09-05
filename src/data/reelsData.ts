@@ -356,7 +356,7 @@ export const REELS_DATA: ReelItem[] = [
     authorUsername: 'tariq_quotes',
     authorAvatar: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=200&auto=format&fit=crop&q=80',
     isVerified: true,
-    videoUrl: 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4',
+    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4',
     posterUrl: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&auto=format&fit=crop&q=80',
     caption: 'Tajdar-e-Haram Acoustic Vibes 🕌 Jumma Mubarak & daily blessings to all our Instagrand family 🤲 #NaatSharif #TajdarEHaram #Peace',
     audioTrackTitle: 'Tajdar-e-Haram (Acoustic Soul)',
