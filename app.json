@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NovaGrand Premium",
-    "slug": "novagrand-premium",
+    "name": "NovaGrand Pro",
+    "slug": "novagrand-pro",
     "owner": "noushadalam5507",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -54,7 +54,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "9c7ed2d3-704e-4af4-8f2f-ef1f76673a52"
+        "projectId": "7886bbde-0d83-49f3-bbba-7ff9e8febcfe"
       }
     }
   }
